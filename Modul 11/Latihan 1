@@ -1,0 +1,7 @@
+df_nabilah = read.delim("clipboard")
+View(df_nabilah)
+head(df_nabilah)
+model <- aov(korosi~metode, data=df_nabilah)
+summary(model)
+tukey.test <- TukeyHSD(model)
+tukey.test
